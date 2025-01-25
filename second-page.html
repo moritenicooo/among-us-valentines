@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're My Valentine!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1> YIPPIIIIEEEEE You're My Valentine!</h1>
+    </header>
+
+    <!-- Yippie Cat GIF and Other Image -->
+    <section class="image-section">
+        <!-- Yippie Cat GIF -->
+        <img src="yippie-cat.gif" alt="Yippie Cat" class="yippie-cat-image" id="yippieCatImage" onload="playSound()">
+        
+        <!-- Other Image (e.g., Valentine Image) -->
+        <img src="valentine-image.png" alt="Valentine's Day" class="valentine-image">
+    </section>
+
+    <section class="message-section">
+        <p class="message">I LOVE YOUUU 💖</p>
+    </section>
+
+    <footer>
+        <p>Made with ♥ by Nico</p>
+        <button onclick="window.location.href='index.html'">Go Back</button>
+    </footer>
+
+    <!-- Yippie Cat Sound -->
+    <audio id="yippieCatSound" autoplay loop>
+        <source src="yippie-cat-sound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Play the Yippie Cat sound when the GIF is loaded
+        function playSound() {
+            var audio = document.getElementById("yippieCatSound");
+            audio.play(); // Play sound when GIF is loaded
+        }
+    </script>
+</body>
+</html>
+
+
