@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="background-music" autoplay loop>
+        <source src="background-music.mp3" type="audio/mp3">
+        <source src="background-music.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <header>
+        <h1>Are You the Impostor? Because You Stole My Heart 💖</h1>
+    </header>
+
+    <section class="image-section">
+        <img src="UwU.png" alt="Among Us Valentine's" class="image">
+    </section>
+
+    <section class="message-section">
+        <p class="message">Hi Cookie! ♥</p>
+    </section>
+
+    <section class="question-section">
+        <p class="question">Will you be my Valentine? :D</p>
+        <!-- Redirect to second-page.html when "Yes" is clicked -->
+        <button class="yes-button" onclick="window.location.href='second-page.html'">Yes, of course!</button>
+        <button class="no-button" onclick="showNoMessage()">No is not an option!</button>
+    </section>
+
+    <footer>
+        <p>Made with ♥ by Nico</p>
+    </footer>
+
+    <script>
+
+        function playMusic() {
+            var audio = document.getElementById('background-music');
+            audio.play();
+        }
+        function showNoMessage() {
+            alert("HAHAHAHA No is not an option! :)");
+        }
+  // Ensure the audio persists on page load
+  if (localStorage.getItem("audioPlaying") === "true") {
+            var audio = document.getElementById("background-music");
+            audio.play();
+        }
+
+        // Set the audio state to "true" when the page loads
+        window.addEventListener("beforeunload", function() {
+            localStorage.setItem("audioPlaying", "true");
+        });
+    </script>
+</body>
+</html>
